@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Unit Converter Tool</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #4facfe, #00f2fe);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      text-align: center;
+      padding: 20px;
+      color: white;
+      font-size: 24px;
+      font-weight: 600;
+    }
+
+    .container {
+      background: white;
+      max-width: 400px;
+      margin: auto;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+
+    label {
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 12px;
+      margin-top: 5px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+      font-size: 14px;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background: #4facfe;
+      border: none;
+      color: white;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #007bff;
+    }
+
+    .result {
+      margin-top: 15px;
+      padding: 12px;
+      background: #f1f5f9;
+      border-radius: 8px;
+      text-align: center;
+      font-weight: 600;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 20px;
+      color: white;
+      font-size: 14px;
+    }
+
+    @media (max-width: 500px) {
+      .container {
+        margin: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  ⚡ Unit Converter Tool
+</header>
+
+<div class="container">
+
+  <label>Enter Value</label>
+  <input type="number" id="inputValue" placeholder="e.g. 10">
+
+  <label>Select Conversion</label>
+  <select id="conversionType">
+    <option value="kmToMiles">Kilometers → Miles</option>
+    <option value="milesToKm">Miles → Kilometers</option>
+    <option value="kgToLbs">Kilograms → Pounds</option>
+    <option value="lbsToKg">Pounds → Kilograms</option>
+    <option value="cToF">Celsius → Fahrenheit</option>
+    <option value="fToC">Fahrenheit → Celsius</option>
+  </select>
+
+  <button onclick="convert()">Convert</button>
+
+  <div class="result" id="result">Your result will appear here</div>
+
+</div>
+
+<footer>
+  Made with ❤️ by You
+</footer>
+
+<script>
+  function convert() {
+    let value = document.getElementById("inputValue").value;
+    let type = document.getElementById("conversionType").value;
+    let result;
+
+    if (value === "") {
+      document.getElementById("result").innerText = "Please enter a value";
+      return;
+    }
+
+    value = parseFloat(value);
+
+    switch(type) {
+      case "kmToMiles":
+        result = value * 0.621371;
+        break;
+      case "milesToKm":
+        result = value / 0.621371;
+        break;
+      case "kgToLbs":
+        result = value * 2.20462;
+        break;
+      case "lbsToKg":
+        result = value / 2.20462;
+        break;
+      case "cToF":
+        result = (value * 9/5) + 32;
+        break;
+      case "fToC":
+        result = (value - 32) * 5/9;
+        break;
+    }
+
+    document.getElementById("result").innerText = "Result: " + result.toFixed(2);
+  }
+</script>
+
+</body>
+</html>
