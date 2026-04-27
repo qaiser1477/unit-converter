@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Qaiser Tools</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #f5f7fb;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(135deg, #4facfe, #00f2fe);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 16px;
+      opacity: 0.9;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 15px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 15px;
+      background: #4facfe;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #007bff;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #777;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>⚡ Qaiser Tools</h1>
+  <p>Simple, fast & free online tools</p>
+</header>
+
+<div class="container">
+
+  <div class="grid">
+
+    <!-- Tool 1 -->
+    <div class="card">
+      <h3>Unit Converter</h3>
+      <p>Convert length, weight & temperature easily</p>
+      <a class="btn" href="converter.html">Open Tool</a>
+    </div>
+
+    <!-- Tool 2 -->
+    <div class="card">
+      <h3>Calculator</h3>
+      <p>Simple and fast calculator (coming soon)</p>
+      <a class="btn" href="#">Coming Soon</a>
+    </div>
+
+    <!-- Tool 3 -->
+    <div class="card">
+      <h3>Password Generator</h3>
+      <p>Create strong secure passwords</p>
+      <a class="btn" href="#">Coming Soon</a>
+    </div>
+
+    <!-- Tool 4 -->
+    <div class="card">
+      <h3>More Tools</h3>
+      <p>New tools will be added regularly</p>
+      <a class="btn" href="#">Stay Tuned</a>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  © 2026 Qaiser Tools. Built with ❤️
+</footer>
+
+</body>
+</html>
